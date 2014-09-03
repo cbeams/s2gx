@@ -5,10 +5,11 @@ version = '0.1.0'
 
 repositories {
     jcenter()
+    mavenLocal()
 }
 
 dependencies {
-    compile 'com.google:bitcoinj:0.11.3'
+    compile 'com.google:bitcoinj:0.12-SNAPSHOT'
     testCompile 'junit:junit:4.11';
 }
 
