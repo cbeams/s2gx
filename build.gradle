@@ -1,4 +1,7 @@
 apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'Main'
 
 sourceCompatibility = 1.8
 version = '0.1.0'
