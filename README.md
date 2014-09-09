@@ -7,7 +7,7 @@ Hey! Coming to [my talk](https://2014.event.springone2gx.com/schedule/sessions/t
 The app doesn't do anything at the moment. I'll push the actual code onstage. Then everyone participating will do this:
 
     git pull
-    ./gradlew run
+    ./gradlew --offline run
 
 The app that you run will be a puzzle, and you'll be in a race with everyone else's CPUs to solve it. The first few to solve it and send me the solution via email will get a reward. I'll explain both the puzzle and the reward during the talk. 
 
