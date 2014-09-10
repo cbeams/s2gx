@@ -11,7 +11,7 @@ public class Main {
 
     private static final NetworkParameters MAINNET = MainNetParams.get();
     private static final int NUM_PROCS = Runtime.getRuntime().availableProcessors();
-    private static final String TARGET = "winner";
+    private static final String TARGET = "s2gx";
 
     public static void main(String... args) {
         AtomicBoolean keepSearching = new AtomicBoolean(true);
