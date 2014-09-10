@@ -22,7 +22,7 @@ public class Main {
                 while (keepSearching.get()) {
                     ECKey key = new ECKey();
                     Address address = key.toAddress(MAINNET);
-                    if (address.toString().indexOf(TARGET) == 1
+                    if (address.toString().substring(1, 10).contains(TARGET)
                             && keepSearching.compareAndSet(true, false)) {
                         System.out.println("Address: " + address);
                         System.out.println("Privkey: " + key.getPrivateKeyEncoded(MAINNET));
