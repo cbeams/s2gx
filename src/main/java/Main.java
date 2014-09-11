@@ -11,7 +11,7 @@ public class Main {
 
     private static final NetworkParameters MAINNET = MainNetParams.get();
     private static final int NUM_PROCS = Runtime.getRuntime().availableProcessors();
-    private static final String TARGET = "s2gx";
+    private static final String TARGET = "1s2gx";
 
     public static void main(String... args) {
         AtomicBoolean keepSearching = new AtomicBoolean(true);
@@ -22,7 +22,7 @@ public class Main {
                 while (keepSearching.get()) {
                     ECKey key = new ECKey();
                     Address address = key.toAddress(MAINNET);
-                    if (address.toString().substring(1, 10).contains(TARGET)
+                    if (address.toString().startsWith(TARGET)
                             && keepSearching.compareAndSet(true, false)) {
                         System.out.println("Address: " + address);
                         System.out.println("Privkey: " + key.getPrivateKeyEncoded(MAINNET));
