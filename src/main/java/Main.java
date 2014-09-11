@@ -17,6 +17,8 @@ public class Main {
         AtomicBoolean keepSearching = new AtomicBoolean(true);
         ExecutorService executor = Executors.newFixedThreadPool(NUM_PROCS);
 
+        System.out.println("searching for address starting with " + TARGET + "...");
+
         for (int i = 0; i < NUM_PROCS; i++) {
             executor.execute(() -> {
                 while (keepSearching.get()) {
